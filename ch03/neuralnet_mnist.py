@@ -12,7 +12,7 @@ def get_data():
     return x_test, t_test
 
 
-def init_network():
+def init_network(): #pickleファイルのsample_weight.pklに保存された学習済みの重みパラメータを読み込む
     with open("sample_weight.pkl", 'rb') as f:
         network = pickle.load(f)
     return network
@@ -32,7 +32,7 @@ def predict(network, x):
     return y
 
 
-x, t = get_data()
+x, t = get_data() #MNISTデータセットを取得
 network = init_network()
 accuracy_cnt = 0
 for i in range(len(x)):
