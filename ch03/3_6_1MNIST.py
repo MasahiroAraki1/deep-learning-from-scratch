@@ -1,12 +1,13 @@
+# coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  #eƒfƒBƒŒƒNƒgƒŠ‚Ìƒtƒ@ƒCƒ‹‚ğƒCƒ“ƒ|[ƒg‚·‚é‚½‚ß‚Ìİ’è
+sys.path.append(os.pardir)  #è¦ªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹ãŸã‚ã®è¨­å®š
 from dataset.mnist import load_mnist
 
-#Å‰‚ÌŒÄ‚Ño‚µ‚Í”•ª‘Ò‚¿‚Ü‚·EEE
+#æœ€åˆã®å‘¼ã³å‡ºã—ã¯æ•°åˆ†å¾…ã¡ã¾ã™ãƒ»ãƒ»ãƒ»
 (x_train, t_train), (x_test, t_test) = \
     load_mnist(flatten=True, normalize=False)
 
-#‚»‚ê‚¼‚ê‚Ìƒf[ƒ^Œ`ó‚ğo—Í
+#ãã‚Œãã‚Œã®ãƒ‡ãƒ¼ã‚¿å½¢çŠ¶ã‚’å‡ºåŠ›
 print(x_train.shape) #(60000, 784)
 print(t_train.shape) #(60000, )
 print(x_test.shape) #(10000, 784)
