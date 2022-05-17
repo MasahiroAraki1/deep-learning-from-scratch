@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # è¦ªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹ãŸã‚ã®è¨­å®š
+sys.path.append(os.pardir)  # eƒfƒBƒŒƒNƒgƒŠ‚Ìƒtƒ@ƒCƒ‹‚ğƒCƒ“ƒ|[ƒg‚·‚é‚½‚ß‚Ìİ’è
 import numpy as np
 import pickle
 from dataset.mnist import load_mnist
@@ -35,7 +35,7 @@ def predict(network, x):
 x, t = get_data()
 network = init_network()
 
-batch_size = 100 # ãƒãƒƒãƒã®æ•°
+batch_size = 100 # ƒoƒbƒ`‚Ì”
 accuracy_cnt = 0
 
 for i in range(0, len(x), batch_size):

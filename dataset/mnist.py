@@ -92,19 +92,19 @@ def _change_one_hot_label(X):
 
 
 def load_mnist(normalize=True, flatten=True, one_hot_label=False):
-    """MNISTãƒ‡ãƒ¼ã‚¿ã‚»ãƒƒãƒˆã®èª­ã¿è¾¼ã¿
+    """MNISTƒf[ƒ^ƒZƒbƒg‚Ì“Ç‚İ‚İ
 
     Parameters
     ----------
-    normalize : ç”»åƒã®ãƒ”ã‚¯ã‚»ãƒ«å€¤ã‚’0.0~1.0ã«æ­£è¦åŒ–ã™ã‚‹
+    normalize : ‰æ‘œƒsƒNƒZƒ‹’l‚ğ0.0~1.0‚É³‹K‰»‚·‚é
     one_hot_label :
-        one_hot_labelãŒTrueã®å ´åˆã€ãƒ©ãƒ™ãƒ«ã¯one-hoté…åˆ—ã¨ã—ã¦è¿”ã™
-        one-hoté…åˆ—ã¨ã¯ã€ãŸã¨ãˆã°[0,0,1,0,0,0,0,0,0,0]ã®ã‚ˆã†ãªé…åˆ—
-    flatten : ç”»åƒã‚’ä¸€æ¬¡å…ƒé…åˆ—ã«å¹³ã«ã™ã‚‹ã‹ã©ã†ã‹
+        one_hot_label‚ªTrue‚Ìê‡Aƒ‰ƒxƒ‹‚Íone-hot”z—ñ‚Æ‚µ‚Ä•Ô‚·
+        one-hot”z—ñ‚Æ‚ÍA‚½‚Æ‚¦‚Î[0,0,1,0,0,0,0,0,0,0]‚Ì‚æ‚¤‚È”z—ñ
+    flatten : ‰æ‘œ‚ğˆêŸŒ³”z—ñ‚É•½‚É‚·‚é‚©
 
     Returns
     -------
-    (è¨“ç·´ç”»åƒ, è¨“ç·´ãƒ©ãƒ™ãƒ«), (ãƒ†ã‚¹ãƒˆç”»åƒ, ãƒ†ã‚¹ãƒˆãƒ©ãƒ™ãƒ«)
+    (ŒP—û‰æ‘œ, ŒP—ûƒ‰ƒxƒ‹), (ƒeƒXƒg‰æ‘œ, ƒeƒXƒgƒ‰ƒxƒ‹)
     """
     if not os.path.exists(save_file):
         init_mnist()

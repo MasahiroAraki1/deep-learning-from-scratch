@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # è¦ªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹ãŸã‚ã®è¨­å®š
+sys.path.append(os.pardir)  # eƒfƒBƒŒƒNƒgƒŠ‚Ìƒtƒ@ƒCƒ‹‚ğƒCƒ“ƒ|[ƒg‚·‚é‚½‚ß‚Ìİ’è
 import numpy as np
 import pickle
 from dataset.mnist import load_mnist
@@ -12,7 +12,7 @@ def get_data():
     return x_test, t_test
 
 
-def init_network(): #pickleãƒ•ã‚¡ã‚¤ãƒ«ã®sample_weight.pklã«ä¿å­˜ã•ã‚ŒãŸå­¦ç¿’æ¸ˆã¿ã®é‡ã¿ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã‚€
+def init_network(): #pickleƒtƒ@ƒCƒ‹‚Ìsample_weight.pkl‚É•Û‘¶‚³‚ê‚½ŠwKÏ‚İ‚Ìd‚İƒpƒ‰ƒ[ƒ^‚ğ“Ç‚İ‚Ş
     with open("sample_weight.pkl", 'rb') as f:
         network = pickle.load(f)
     return network
@@ -32,12 +32,12 @@ def predict(network, x):
     return y
 
 
-x, t = get_data() #MNISTãƒ‡ãƒ¼ã‚¿ã‚»ãƒƒãƒˆã‚’å–å¾—
+x, t = get_data() #MNISTƒf[ƒ^ƒZƒbƒg‚ğæ“¾
 network = init_network()
 accuracy_cnt = 0
 for i in range(len(x)):
     y = predict(network, x[i])
-    p= np.argmax(y) # æœ€ã‚‚ç¢ºç‡ã®é«˜ã„è¦ç´ ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’å–å¾—
+    p= np.argmax(y) # Å‚àŠm—¦‚Ì‚‚¢—v‘f‚ÌƒCƒ“ƒfƒbƒNƒX‚ğæ“¾
     if p == t[i]:
         accuracy_cnt += 1
 
