@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # eƒfƒBƒŒƒNƒgƒŠ‚Ìƒtƒ@ƒCƒ‹‚ğƒCƒ“ƒ|[ƒg‚·‚é‚½‚ß‚Ìİ’è
+sys.path.append(os.pardir)  # è¦ªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹ãŸã‚ã®è¨­å®š
 import numpy as np
 from dataset.mnist import load_mnist
 from PIL import Image
@@ -17,7 +17,7 @@ label = t_train[0]
 print(label)  # 5
 
 print(img.shape)  # (784,)
-img = img.reshape(28, 28)  # Œ`ó‚ğŒ³‚ÌƒTƒCƒY‚É•ÏŒ`
+img = img.reshape(28, 28)  # å½¢çŠ¶ã‚’å…ƒã®ã‚µã‚¤ã‚ºã«å¤‰å½¢
 print(img.shape)  # (28, 28)
 
 img_show(img)
