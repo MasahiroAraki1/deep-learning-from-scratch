@@ -18,7 +18,7 @@ def tangent_line(f, x):
     y = f(x) - d*x
     return lambda t: d*t + y
      
-x = np.arange(0.0, 20.0, 0.1)
+x = np.arange(0.0, 20.0, 0.1) #0から20まで、0.1刻みのx配列
 y = function_1(x)
 plt.xlabel("x")
 plt.ylabel("f(x)")
@@ -26,6 +26,13 @@ plt.ylabel("f(x)")
 tf = tangent_line(function_1, 5)
 y2 = tf(x)
 
+tf = tangent_line(function_1, 10)
+y3 = tf(x)
+
+plt.figure(1)
 plt.plot(x, y)
 plt.plot(x, y2)
+plt.figure(2)
+plt.plot(x, y)
+plt.plot(x, y3)
 plt.show()
