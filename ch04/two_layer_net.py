@@ -61,6 +61,8 @@ class TwoLayerNet:
         batch_num = x.shape[0]
         
         # forward
+        print(np.dot(x, W1))
+        print(b1)
         a1 = np.dot(x, W1) + b1
         z1 = sigmoid(a1)
         a2 = np.dot(z1, W2) + b2
